@@ -1,7 +1,7 @@
 # EXAM-1337-42 all levels comming soon!!!! |:)
 
 
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="200" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <circle cx="60" cy="60" r="50" fill="#00599C">
     <animate
       attributeName="r"
