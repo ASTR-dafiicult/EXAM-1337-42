@@ -1,5 +1,0 @@
-file = test.c test2.c
-CC = gcc
-FLAGS = -W -W -W 
-PATH_TO_OBJ = "run"
-PATH_LIB =./lib
