@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EXAM-1337-42 all levels comming soon!!!! |:)
 
 
@@ -19,3 +20,6 @@
     C
   </text>
 </svg>
+=======
+# DAYS
+>>>>>>> 67a9994 (oops)
