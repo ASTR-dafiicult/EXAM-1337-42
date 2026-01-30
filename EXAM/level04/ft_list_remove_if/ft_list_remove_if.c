@@ -32,6 +32,8 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
         }
     }
 }
+
+/*
 # include <stdio.h>
 
 int cmp_val(void *b1, void *b2)
@@ -92,3 +94,4 @@ int main()
     print_list(head);
     printf("\n");
 }
+*/
