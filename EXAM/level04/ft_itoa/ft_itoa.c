@@ -1,6 +1,5 @@
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 
 char	*ft_itoa(int nbr)
@@ -46,6 +45,7 @@ char	*ft_itoa(int nbr)
         str[0] = '-';
     return str;
 }
+/*
 int main()
 {
     int nbr = -2147483647;
@@ -54,3 +54,4 @@ int main()
     free(str);
 
 }
+*/
