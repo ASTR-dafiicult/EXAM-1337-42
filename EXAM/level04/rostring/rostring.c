@@ -1,3 +1,4 @@
+// 💀 this code
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -12,18 +13,18 @@ void ft_putstr(char *str)
     while(str[i])
         ft_putchar(str[i++]);
 }
-int blank(char c)
+int space(char c)
 {
     if(c == 32 || c == 9)
     {
-        return 0;
+        return 1;
     }
-    return 1;
+    return 0;
 }
 int length_word(char *str)
 {
     int i = 0;
-    while(str[i] && blank(str[i]))
+    while(str[i] && !space(str[i]))
     {
         i++;
     }
@@ -52,9 +53,9 @@ int main(int ac, char **av)
         int i = 0;
         int j = 0;
         char **str = malloc(2 * sizeof(char *));
-        while((av[1][i] && access) || (!blank(av[1][i])))
+        while((av[1][i] && access) || (space(av[1][i])))
         {
-            if(blank(av[1][i]))
+            if(!space(av[1][i]))
             {
                 size = length_word(&av[1][i]);
                 str[j] = copy_word(&av[1][i], size);
@@ -75,31 +76,27 @@ int main(int ac, char **av)
         access = 0;
         while(av[1][i])
         {
-            if(blank(av[1][i]))
+            if(!space(av[1][i]))
             {
                 ft_putchar(av[1][i]);
             }
-            if(blank(av[1][i]) && av[1][i + 1] == '\0')
+            if(!space(av[1][i]) && (av[1][i + 1] == '\0'))
             {
                 ft_putchar(' ');
             }
             if(access)
             {
-                ft_putchar(av[1][i]);
+                ft_putchar(av[1][i]);//print space
                 access = 0;
             }
-            else if(blank(av[1][i]) && !blank(av[1][i + 1]))
+            if(!space(av[1][i]) && space(av[1][i + 1]))
             {
                 access = 1;
             }
             i++;
         }
         i = 0;
-        j = 0;
-        while(str[i])
-        {
-            ft_putstr(str[i++]);
-        }
+            ft_putstr(str[i]);
         free(str[0]);
         free(str);
     }
