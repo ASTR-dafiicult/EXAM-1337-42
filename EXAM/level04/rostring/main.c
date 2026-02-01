@@ -1,5 +1,4 @@
 # include <unistd.h>
-# include <stdlib.h>
 
 void ft_putchar(char c)
 {
@@ -23,7 +22,8 @@ int main(int ac, char **av)
     {
         int size;
         int i = 0;
-        int j = 0;
+        int sp = 0;
+        int printed = 0;
         while(av[1][i] && space(av[1][i]))
         {    
             i++;
@@ -33,17 +33,24 @@ int main(int ac, char **av)
             i++;
         while(av[1][i]) /// print after get &first char
         {
-            while(space(av[1][i]))
-                i++;
+            if(!space(av[1][i]) && sp)
+            {
+                ft_putchar(' ');
+                sp = 0;
+            }
             while(!space(av[1][i]) && av[1][i])
             {
                 ft_putchar(av[1][i]);
+                printed = 1;
                 i++;
                 if(space(av[1][i]))
-                    ft_putchar(' ');
+                    sp = 1;
             }
+            while(space(av[1][i]))
+                i++;
         }
-        ft_putchar(' ');
+        if(printed)
+            ft_putchar(' ');
         ft_putstr(str);
     }
     ft_putchar('\n');
