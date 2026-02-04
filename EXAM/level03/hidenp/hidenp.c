@@ -1,56 +1,57 @@
 # include <unistd.h>
-# include <stdio.h>
 
-int char_in_order(char c, char *av2, int index)
-{
-    while(av2[index])
-    {
-        if(c == av2[index])
-        {
-            return index;
-        }
-        index++;
-    }
-    return 0;
-}
 int ft_strcmp(char *s1, char *s2)
 {
     int i = 0;
-    while(s1[i] && s2[i])
+    while(s1[i] || s2[i])
     {
         if(s1[i] != s2[i])
         {
-            return (s1[i] - s2[i]);
+            return s1[i] - s2[i];
         }
         i++;
     }
-    return 0;
+    return s1[i] - s2[i];
+}
+int check_char(char c, char *av2, int index)
+{
+    while(av2[index])
+    {
+        if(av2[index] == c)
+            return index;
+        index++;
+    }
+    return -1;
 }
 int main(int ac, char **av)
 {
     if(ac == 3)
     {
         int i = 0;
-        int index = 0;
-        char *tab;
         int j = 0;
-        while(av[1][i])
+        char tab[256] = {0};
+        int index = 0;
+        int acc = 1;
+        while(av[1][i] && acc)
         {
-            index = char_in_order(av[1][i], av[2], index);
-            if(index)
+            index = check_char(av[1][i], av[2], index);
+            if(index != -1)
             {
                 tab[j] = av[1][i];
                 j++;
             }
+            else
+                acc = 0;
             i++;
         }
-        if(ft_strcmp(tab, av[1]) == 0)
+        tab[j] = '\0';
+        if(ft_strcmp(av[1], tab) == 0)
         {
             write(1, "1\n", 2);
-            return 0;
         }
-        write(1, "0", 1);
+        else
+            write(1, "0\n", 2);
+        return 0;
     }
     write(1, "\n", 1);
-    return (0);
 }
