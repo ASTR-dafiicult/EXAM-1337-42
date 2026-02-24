@@ -17,8 +17,12 @@ ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
     {
         if(l1->val)
             val1 = l1->val;
+        else
+            val1 = 0;
         if(l2->val)
             val2 = l2->val;
+        else
+            val2 = 0;
         sum = val1 + val2 + carry;
         ListNode *new = malloc(sizeof(ListNode));
         new->val = sum % 10;
