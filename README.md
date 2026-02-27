@@ -16,7 +16,7 @@ This repository tracks my learning journey in **C programming** and related exam
 | C07    | File I/O                     | Completed ✅ |
 | C08    | Dynamic Memory               | Completed ✅ |
 | C09    | Linked Lists                 | Completed ✅ |
-| C10    | Advanced Topics              | In Progress ⏳ |
+| C10    | Advanced Topics              | Completed ✅ |
 
 ## 📝 Exam Progress
 
@@ -34,3 +34,7 @@ This repository tracks my learning journey in **C programming** and related exam
 - All solutions are written in C.
 - Code is structured by course and level for easy navigation.
 - Contributions or feedback are welcome!
+
+
+*Dennis Ritchie said:*  
+> *“C is quirky, flawed, and an enormous success.”*
