@@ -42,4 +42,6 @@ This repository tracks my learning journey in **C programming** and related exam
 
 
 *Dennis Ritchie said:*  
-> *“C is quirky, flawed, and an enormous success.”*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ASTR-dafiicult/GITHUB_action/main/github/images/Quotefancy-1071011-3840x2160.jpg" alt="Dennis Ritchie Quote Image" width="800"/>
+</p>
