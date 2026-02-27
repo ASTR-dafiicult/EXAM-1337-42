@@ -27,7 +27,7 @@ This repository tracks my learning journey in **C programming** and related exam
 | Level02 | Arrays & Pointers          | Completed ✅ |
 | Level03 | Strings & Structs          | Completed ✅ |
 | Level04 | File Handling & Memory     | Completed ✅ |
-| Level05 | Advanced Projects          | In Progress ⏳ |
+| Level05 | Advanced Projects          | Completed ✅ |
 
 ## ⚡ Notes
 
