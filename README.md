@@ -17,6 +17,9 @@ This repository tracks my learning journey in **C programming** and related exam
 | C08    | Dynamic Memory               | Completed ✅ |
 | C09    | Linked Lists                 | Completed ✅ |
 | C10    | Advanced Topics              | Completed ✅ |
+| C11    | Modern C Features            | In Progress ⏳ |
+| C12    | Optimization & Debugging     | In Progress ⏳ |
+| C13    | Projects & Applications      | In Progress ⏳ |
 
 ## 📝 Exam Progress
 
