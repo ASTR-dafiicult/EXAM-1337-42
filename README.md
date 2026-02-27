@@ -17,7 +17,7 @@ This repository tracks my learning journey in **C programming** and related exam
 | C06    | Command Line Arguments (argc, argv)               | Completed ✅ |
 | C07    | File I/O                     | Completed ✅ |
 | C08    | Dynamic Memory               | Completed ✅ |
-| C09    | Linked Lists                 | Completed ✅ |
+| C09    | Make File                    | Completed ✅ |
 | C10    | Advanced Topics              | Completed ✅ |
 | C11    | Modern C Features            | In Progress ⏳ |
 | C12    | Optimization & Debugging     | In Progress ⏳ |
