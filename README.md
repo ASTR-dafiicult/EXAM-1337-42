@@ -1,25 +1,36 @@
-<<<<<<< HEAD
-# EXAM-1337-42 all levels DONE!
+# My C Programming Progress
 
+This repository tracks my learning journey in **C programming** and related exams.
 
-<svg width="300" height="200" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50" fill="#00599C">
-    <animate
-      attributeName="r"
-      values="45;50;45"
-      dur="2s"
-      repeatCount="indefinite"/>
-  </circle>
+## 📚 Course Progress
 
-  <text x="60" y="75"
-        font-size="60"
-        fill="white"
-        font-family="Arial, Helvetica, sans-serif"
-        text-anchor="middle"
-        font-weight="bold">
-    C
-  </text>
-</svg>
-=======
-# DAYS
->>>>>>> 67a9994 (oops)
+| Course | Description                  | Status      |
+|--------|------------------------------|------------|
+| C00    | Basics of C (variables, I/O) | Completed ✅ |
+| C01    | Control Structures           | Completed ✅ |
+| C02    | Functions & Scope            | Completed ✅ |
+| C03    | Arrays                       | Completed ✅ |
+| C04    | Pointers                     | Completed ✅ |
+| C05    | Strings                      | Completed ✅ |
+| C06    | Structs & Enums              | Completed ✅ |
+| C07    | File I/O                     | Completed ✅ |
+| C08    | Dynamic Memory               | Completed ✅ |
+| C09    | Linked Lists                 | Completed ✅ |
+| C10    | Advanced Topics              | In Progress ⏳ |
+
+## 📝 Exam Progress
+
+| Level  | Description                | Status      |
+|--------|----------------------------|------------|
+| Level00 | Basics Exercises            | Completed ✅ |
+| Level01 | Control & Functions        | Completed ✅ |
+| Level02 | Arrays & Pointers          | Completed ✅ |
+| Level03 | Strings & Structs          | Completed ✅ |
+| Level04 | File Handling & Memory     | Completed ✅ |
+| Level05 | Advanced Projects          | In Progress ⏳ |
+
+## ⚡ Notes
+
+- All solutions are written in C.
+- Code is structured by course and level for easy navigation.
+- Contributions or feedback are welcome!
