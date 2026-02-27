@@ -1,6 +1,6 @@
 # My C Programming Progress
 <p align="center">
-  <img src="https://github.com/ASTR-dafiicult/GITHUB_action/blob/main/github/images/fullmetal%20alchemist%20GIF.gif" alt="Learning C GIF" width="400"/>
+  <img src="https://github.com/ASTR-dafiicult/GITHUB_action/blob/main/github/images/fullmetal%20alchemist%20GIF.gif" alt="Learning C GIF" width="600"/>
 </p>
 This repository tracks my learning journey in **C programming** and related exams.
 
