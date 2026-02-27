@@ -14,7 +14,7 @@ This repository tracks my learning journey in **C programming** and related exam
 | C03    | Arrays                       | Completed ✅ |
 | C04    | Pointers                     | Completed ✅ |
 | C05    | Strings                      | Completed ✅ |
-| C06    | Structs & Enums              | Completed ✅ |
+| C06    | Command Line Arguments (argc, argv)               | Completed ✅ |
 | C07    | File I/O                     | Completed ✅ |
 | C08    | Dynamic Memory               | Completed ✅ |
 | C09    | Linked Lists                 | Completed ✅ |
