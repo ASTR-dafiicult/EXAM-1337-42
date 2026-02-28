@@ -1,5 +1,5 @@
 <a href="#">
-    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=110&color=ff0000&descAlign=79&descAlignY=52&descSize=81&animation=blinking&reversal=false" />
+    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=110&color=990000&descAlign=79&descAlignY=52&descSize=81&animation=blinking&reversal=false" />
 </a>
 # My C Programming Progress
 <p align="center">
