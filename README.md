@@ -1,5 +1,3 @@
-<p align="center">
-  <img src="https://tenor.com/e0chcF4Ikzp.gif" alt="Learning C GIF" width="600"/>
 # My C Programming Progress
 <p align="center">
   <img src="https://github.com/ASTR-dafiicult/GITHUB_action/blob/main/github/images/fullmetal%20alchemist%20GIF.gif" alt="Learning C GIF" width="600"/>
