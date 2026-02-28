@@ -1,3 +1,6 @@
+<a href="#">
+    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=110&color=ff0000&descAlign=79&descAlignY=52&descSize=81&animation=blinking&reversal=false" />
+</a>
 # My C Programming Progress
 <p align="center">
   <img src="https://github.com/ASTR-dafiicult/GITHUB_action/blob/main/github/images/fullmetal%20alchemist%20GIF.gif" alt="Learning C GIF" width="600"/>
