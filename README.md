@@ -1,4 +1,5 @@
-<div class="tenor-gif-embed" data-postid="4061587438228685781" data-share-method="host" data-aspect-ratio="1.77857" data-width="100%"><a href="https://tenor.com/view/dfg-gif-4061587438228685781">Dfg GIF</a>from <a href="https://tenor.com/search/dfg-gifs">Dfg GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<p align="center">
+  <img src="https://tenor.com/e0chcF4Ikzp.gif" alt="Learning C GIF" width="600"/>
 # My C Programming Progress
 <p align="center">
   <img src="https://github.com/ASTR-dafiicult/GITHUB_action/blob/main/github/images/fullmetal%20alchemist%20GIF.gif" alt="Learning C GIF" width="600"/>
