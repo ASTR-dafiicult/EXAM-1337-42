@@ -1,8 +1,6 @@
 # include <unistd.h>
-# include <stdio.h>
 
-
-
+//1337 = 5 <|> 1 + 3 + 3 + 7 = 14 <|> 1 + 4 = 5
 void ft_putchar(char c)
 {
     write(1, &c, 1);
@@ -24,7 +22,7 @@ int convert_sum(int nb)
     }
     return sum;
 }
-void ft_sum_dogits(int nbr)
+void ft_sum_digits(int nbr)
 {
     int sum = convert_sum(nbr);
     ft_putnbr(convert_sum(sum));
@@ -35,6 +33,7 @@ int main()
 {
     int nbr = 1337;
     ft_sum_dogits(nbr);
+
 
 }
 */
