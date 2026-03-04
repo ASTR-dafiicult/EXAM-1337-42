@@ -1,6 +1,7 @@
 
 # My Codewars C Progress
 
+  <img align="center" src="https://codewars-stats-ignacio-cuadra.vercel.app/?username=ignacio-cuadra&theme=dark" alt = "ignacio-cuadra"/> 
 This repository tracks my **Codewars journey in C**, from **Rank 8** up to **Rank 4**.
 
 ## 🎯 Current Rank
