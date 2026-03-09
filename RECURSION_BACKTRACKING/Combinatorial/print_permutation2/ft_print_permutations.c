@@ -17,12 +17,12 @@ void ft_permutation(char *str, int len , int index)
     int i = index;
     while(i < len)
     {
-        if(str[index] != str[i])
+        if(str[index] != str[i]) //choice
             swap((&str[index]), (&str[i]));
 
-        ft_permutation(str, len, index + 1);
+        ft_permutation(str, len, index + 1);//recursion
 
-        if(str[index] != str[i])
+        if(str[index] != str[i])//backtracking
             swap((&str[index]), &(str[i]));
         i++;
     }
