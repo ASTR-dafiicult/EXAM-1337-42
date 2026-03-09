@@ -1,0 +1,27 @@
+---------------------------------------
+Exercise: ft_replace_and_flip
+
+Files to turn in: ft_replace_and_flip.c
+
+Allowed functions: malloc, free, write
+---------------------------------------
+• Write a function that processes a string, prints the result to the standard output, and returns a pointer to the newly allocated modified string.
+
+• The function must enforce a strict word count rule: the input string must contain a strictly odd number of words, and at least 9 words in total.
+
+• If these conditions are not met, return a newly allocated copy of the original string ending with a space followed by a newline ( \n), and print it.
+
+• Otherwise, a specific transformation occurs involving exactly two distinct words from the original string.
+
+• Furthermore, a completely new numerical word is inserted exactly in the middle of the returned string.
+
+• Which words are targeted, the exact rules of substitution, character manipulation, word delimiters, what this inserted number represents, and how the spaced newline character ( \n) balances the final output must be deduced entirely from the example below.
+
+• Here's how it should be prototyped:
+char *ft_replace_and_flip(char *str);
+
+
+
+• Example:
+Input: "Run   go  go fast   and lO jump go   here"
+Printed / Returned: "Run   Lo  Lo fast   and 11 go jump Lo   here \n"
