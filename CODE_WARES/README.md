@@ -26,6 +26,5 @@ This repository tracks my **Codewars journey in C**, from **Rank 8** up to **Ran
 
 ## 📌 Motivation
 <p align="center">
-  <img src="github/images/Dennis Ritchie  For infrastructure technology C will http___bit_ly_ttfn1.jpg"
-    alt="Dennis Ritchie Quote Image" width="800"/>
+  <img src="https://raw.githubusercontent.com/ASTR-dafiicult/GITHUB_action/main/github/images/Dennis%20Ritchie%20%20For%20infrastructure%20technology%20C%20will%20http___bit_ly_ttfn1.jpg" width="400">
 </p>
