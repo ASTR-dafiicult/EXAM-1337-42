@@ -76,12 +76,6 @@ int ft_strcmp(char *s1, char *s2)
     }
     return 1;
 }
-void swap(char **s1, char **s2)
-{
-    char *tmp = *s1;
-    *s1 = *s2;
-    *s2 = tmp;
-}
 int coun_words(char *str)
 {
     int i = 0;
@@ -90,7 +84,7 @@ int coun_words(char *str)
     {
         if(!blank(str[i]))
         {
-            if(i == 0 || blank(str[i - 1]))
+            if(i == 0 || blank(str[i - 1])) //       hello world
                 count++;
         }
         i++;
@@ -146,7 +140,7 @@ char **new_split(char *str)
 
     char *conv_5 = NULL;
     i = 0;
-    if(size_w)
+    if(size_w > 5)
     {
         char *cop_1 = ft_strdup(tab[1]);
         conv_5 = ft_strdup(tab[5]);
@@ -165,7 +159,7 @@ char **new_split(char *str)
         free(conv_5);
         free(cop_1);
     }
-    
+
     char *size = ft_itoa(size_w + 2);
     int j = size_w + 1;
     j /= 2;
