@@ -1,0 +1,24 @@
+
+<---------FT_ALLSEC_ALPHA-------------->
+file : ft_allsec_alpha.c;
+allowed functions : malloc, write;
+<-------------------------------------->
+Given an alphabet {a, b} of length k
+generate all sequences from aaa to bbb in lexicographical order.
+print the tracing table for all sequences.
+
+<EXAMPLE>
+---------
+
+k = 3
+
+<OUTPUT>
+---------
+a  a  a
+a  a  b
+a  b  a
+a  b  b
+b  a  a
+b  a  b
+b  b  a
+b  b  b

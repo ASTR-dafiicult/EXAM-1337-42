@@ -1,0 +1,27 @@
+<------------FT_PRINT_PERMUTATIONS------------------->
+file : ft_print_permutations.c
+allowed functions : malloc, write
+<---------------------------------------------------->
+
+
+
+Concept: Generate all possible orderings of characters where each character appears exactly once.
+
+Example:
+
+str="abc":
+  abc
+  acb
+  bac
+  bca
+  cab
+  cba
+📖 View Examples
+Requirements:
+
+✅ Generate all orderings (n! permutations)
+✅ Use used array to track chosen characters
+✅ Each character appears exactly once
+✅ Dynamic memory for buffer and used array
+✅ Free all allocated memory
+Decision Pattern: Exhaustive search with state tracking - try each unused character

@@ -1,0 +1,57 @@
+Assignment name : largest_special
+
+Expected files : largest_special.c
+Allowed functions : malloc, free, write
+
+Subject
+
+Write a function that takes a special binary string and returns the lexicographically largest string possible after performing a number of allowed swaps.
+
+A special binary string is defined as a binary string that satisfies the following conditions:
+
+The number of '0' characters is equal to the number of '1' characters.
+
+For every prefix of the string, the number of '1' is greater than or equal to the number of '0'.
+
+Example of special strings:
+
+10
+1100
+11011000
+Allowed operation
+
+You may choose two consecutive non-empty special substrings and swap them.
+
+Two substrings are consecutive if the last character of the first substring is exactly one position before the first character of the second substring.
+
+You may apply this operation as many times as you want.
+
+Prototype:
+
+char *largest_special(char *s);
+
+The function must return a new string containing the lexicographically largest result obtainable.
+-----------------Example----------------------------------
+
+Input:  "11011000"
+Output: "11100100"
+---------------------------------------------------------
+Explanation:
+
+The special substrings "10" and "1100" can be swapped.
+
+11011000
+ -> swap "10" and "1100"
+11100100
+
+This is the largest possible string.
+
+Input:  "10"
+Output: "10"
+
+Notes:
+The returned string must be allocated on the heap.
+
+The input string will always be a valid special binary string.
+
+Lexicographical order means the same order used by strcmp.
