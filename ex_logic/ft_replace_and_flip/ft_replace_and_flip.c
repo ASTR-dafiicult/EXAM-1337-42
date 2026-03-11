@@ -2,44 +2,6 @@
 # include <stdlib.h>
 
 
-char *ft_strdup(char *s)
-{
-    int i = 0;
-    while(s[i])
-        i++;
-    char *RES = malloc((i + 1) * sizeof(char));
-    if(!RES)
-        exit(EXIT_FAILURE);
-    i = 0;
-    while(s[i])
-    {
-        RES[i] = s[i];
-        i++;
-    }
-    RES[i] = '\0';
-    return RES;
-}
-char *ft_itoa(int nb)
-{
-    int i = 0;
-    int tmp = nb;
-    while(tmp)
-    {
-        tmp /= 10;
-        i++;
-    }
-    char *str = malloc((i + 2) * sizeof(char));
-    if(!str)
-        exit(EXIT_FAILURE);
-    str[i + 1] = '\0';
-    str[i] = ' ';
-    while(nb)
-    {
-        str[--i] = ((nb % 10) + 48);
-        nb /= 10;
-    }
-    return str;
-}
 int blank(char c)
 {
     if(c == 32 || c == 9)
@@ -51,45 +13,82 @@ char *convert(char *str)
     int i = 0;
     while(str[i])
     {
-        if(str[i] >= 'A' && str[i] <= 'Z')
-            str[i] += 32;
-        else if(str[i] >= 'a' && str[i] <= 'z')
+        if(str[i] >= 'a' && str[i] <= 'z')
             str[i] -= 32;
+        else if(str[i] >= 'A' && str[i] <= 'Z')
+            str[i] += 32;
+
         i++;
     }
     return str;
 }
-int ft_strcmp(char *s1, char *s2)
+char *ft_itoa(int nb)
+{
+    int tmp = nb;
+    int size = 0;
+    while(tmp)
+    {
+        tmp /= 10;
+        size++;
+    }
+    char *tab = malloc((size + 2) * sizeof(char));
+        if(!tab)
+            exit(EXIT_FAILURE);
+        
+    tab[size++] = ' ';
+    tab[size] = '\0';
+    int i = size - 2;
+    while(nb)
+    {
+        tab[i--] = nb % 10 + 48;
+        nb /= 10;
+    }
+    return tab;
+}
+int ft_strcump(char *s1, char *s2)
 {
     int i = 0;
-    while(s1[i] && s2[i])
+    while(s1[i] || s2[i])
     {
         if(blank(s1[i]) && blank(s2[i]))
-        {
-            return 1;
-        }
-        if(s1[i] != s2[i])
-        {
             return 0;
-        }
+        if(s1[i] != s2[i])
+            return (s1[i] - s2[i]);
         i++;
     }
-    return 1;
+    return 0;
 }
-int coun_words(char *str)
+int count_words(char *str)
 {
     int i = 0;
-    int count = 0;
+    int w = 0;
     while(str[i])
     {
         if(!blank(str[i]))
         {
-            if(i == 0 || blank(str[i - 1])) //       hello world
-                count++;
+            if(i == 0 || blank(str[i - 1]))
+                w++;
         }
         i++;
     }
-    return count;
+    return w;
+}
+char *ft_strdup(char *str)
+{
+    int i = 0;
+    while(str[i])
+        i++;
+    char *tab = malloc((i + 1) * sizeof(char));
+        if(!tab)
+            exit(EXIT_FAILURE);
+    int index = 0;
+    while(str[index])
+    {
+        tab[index] = str[index];
+        index++;
+    }
+    tab[index] = '\0';
+    return tab;
 }
 int length_string(char *str)
 {
@@ -98,134 +97,108 @@ int length_string(char *str)
         i++;
     while(str[i] && blank(str[i]))
         i++;
+
     return i;
 }
-char *copy(char *str, int length)
+char *ft_own_strdup(char *str, int length)
 {
     char *tab = malloc((length + 1) * sizeof(char));
-    if(!tab)
-        exit(EXIT_FAILURE);
-    int i = 0;
-    while(i < length)
+        if(!tab)
+            exit(EXIT_FAILURE);
+    int j = 0;
+    while(j < length)
     {
-        tab[i] = str[i];
-        i++;
+        tab[j] = str[j];
+        j++;
     }
-    tab[i] = '\0';
+    tab[j] = '\0';
     return tab;
 }
-char **new_split(char *str)
+char *spliting(char *str)
 {
-    int size_w = coun_words(str);
-    char **tab = malloc((size_w + 3) * sizeof(char *));
-    if(!tab)
-        exit(EXIT_FAILURE);
-
-    int i = 0;
+    int words_c = count_words(str);
+    char **tab = malloc((words_c + 3) * sizeof(char *));
+        if(!tab)
+            exit(EXIT_FAILURE);
     int index = 0;
     int length = 0;
+    int i = 0;
     while(str[i])
     {
         if(!blank(str[i]))
         {
             length = length_string(&str[i]);
-            tab[index++] = copy(&str[i], length);
+            tab[index++] = ft_own_strdup(&str[i], length);
             i += length;
         }
         else
             i++;
     }
-    tab[index] = ft_strdup("\n");
-    tab[index + 1] = NULL;
+    tab[index++] = ft_strdup("\\n");
+    tab[index++] = "\n";
+    tab[index] = NULL;
+    int len = i + 5;
+    //---------------------------------------------------------------------//
 
-    char *conv_5 = NULL;
-    i = 0;
-    if(size_w > 5)
+    if(words_c > 5)
     {
-        char *cop_1 = ft_strdup(tab[1]);
-        conv_5 = ft_strdup(tab[5]);
-        convert(conv_5);
+        char *copy_1 = ft_strdup(tab[1]);
+        char *copy_5 = ft_strdup(convert(tab[5]));
+        i = 0;
         while(tab[i])
         {
-            if(ft_strcmp(cop_1, tab[i]))
+            if(!ft_strcump(copy_1, tab[i]) == 1)
             {
                 free(tab[i]);
-                tab[i] = ft_strdup(conv_5);
+                tab[i] = ft_strdup(copy_5);
             }
             i++;
         }
         free(tab[5]);
-        tab[5] = ft_strdup(cop_1);
-        free(conv_5);
-        free(cop_1);
+        tab[5] = ft_strdup(copy_1);
+        free(copy_1);
+        free(copy_5);
     }
-
-    char *size = ft_itoa(size_w + 2);
-    int j = size_w + 1;
+    //------------------------------------------------------------------------------|
+    char *size = ft_itoa(words_c + 2);
+    int j = words_c + 1;
     j /= 2;
-    i = size_w;
+    i = words_c;
 
     while (i >= j)
     {
         tab[i + 1] = tab[i];
         i--;
     }
-    tab[j] = size;
-    return tab;
-}
-char *ft_replace_and_flip(char *str)
-{
-    char **res = new_split(str);
-    int i = 0;
-    int j;
-    int count = 0;
-    while(res[i])
+    tab[j] = ft_strdup(size);
+    free(size);
+//-----------------------------------------------------------------------|
+    char *final = malloc((len + 1) * sizeof(char));
+        if(!final)
+            exit(EXIT_FAILURE);
+    i = 0;
+    index = 0;
+    while(tab[i])
     {
         j = 0;
-        while(res[i][j])
+        while(tab[i][j])
         {
-            count++;
-            j++;
+            final[index++] = tab[i][j++];
         }
+        free(tab[i]);
         i++;
     }
-    char *tab_final = malloc((count + 1) * sizeof(char));
-    if(!tab_final)
-        exit(EXIT_FAILURE);
-
-    int in = 0;
-    int index = 0;
-    while(res[in])
-    {
-        int k = 0;
-        while(res[in][k])
-        {
-            tab_final[index++] = res[in][k++];
-        }
-        free(res[in]);
-        in++;
-    }
-    free(res);
-    
-    tab_final[index] = '\0';
-    return tab_final;
+    free(tab);
+    final[index] = '\0';
+    return final;
 }
-int main(int ac, char **av)
+/*
+# include <stdio.h>
+int main()
 {
-    if(ac == 2)
-    {
-        char *res = ft_replace_and_flip(av[1]);
-        int i = 0;
-        while(res[i])
-        {
-            write(1, &res[i++], 1);
-        }
+    char str[] = "Run   go  go fast   and lO jump go   here";
+    char *res = spliting(str);
+        printf("%s\n", res);
         free(res);
-    }
-    else
-        write(1, "\n", 1);
-
-    exit(EXIT_SUCCESS);
 }
-//Run   Lo  Lo fast  and 11 go jump Lo here$
-//Run   Lo  Lo fast  and 11 go jump Lo here$
+*/
