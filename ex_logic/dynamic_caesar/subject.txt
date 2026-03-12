@@ -1,0 +1,6 @@
+Exercise 01: ft_dynamic_caesar
+Turn-in directory: ex01/
+Files to turn in: ft_dynamic_caesar.c
+Allowed functions: malloc, free
+Description: Write a function that takes a string and an integer (shift value). The function must allocate enough memory to return a new string where every alphabetical character is shifted by the given integer. Non-alphabetical characters remain unchanged. It must handle positive and negative shifts properly.
+Prototype: char *ft_dynamic_caesar(char *str, int shift);

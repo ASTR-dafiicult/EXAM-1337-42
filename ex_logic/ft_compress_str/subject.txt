@@ -1,0 +1,6 @@
+Exercise 02: ft_compress_str
+Turn-in directory: ex02/
+Files to turn in: ft_compress_str.c
+Allowed functions: malloc, free
+Description: Write a function that compresses a given string by counting consecutive repeating characters. For example, "aaabbc" becomes "a3b2c1". The function must dynamically allocate the exact amount of memory needed for the new string and return it.
+Prototype: char *ft_compress_str(char *str);
