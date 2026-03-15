@@ -1,0 +1,13 @@
+
+Exercise 05: ft_target_sum
+Turn-in directory: ex05/
+Files to turn in: ft_target_sum.c
+Allowed functions: malloc, free
+Description: Write a function that takes an array of integers, 
+its size, and a target integer. Find all distinct pairs of numbers in the array that add up to the target. Return a dynamically allocated 2D array of integers containing these pairs. The 2D array must be terminated by a NULL pointer.
+
+
+
+
+Prototype: int **ft_target_sum(int *tab, int size, int target);
+

@@ -1,0 +1,19 @@
+Exercise 04: ft_is_base_anagram
+Turn-in directory: ex04/
+Files to turn in: ft_is_base_anagram.c
+Allowed functions: None
+Description: Write a function that checks if two strings are anagrams of each other. However, it should only consider characters that are present in a third parameter called "base". Any character in the strings that does not exist in the base must be completely ignored. Return 1 if they are anagrams based on this rule, and 0 otherwise.
+Prototype: int ft_is_base_anagram(char *s1, char *s2, char *base);
+
+
+<EXAMPLES>
+------------
+base = "abc"
+s1 = "aabbc"
+s2 = "bcaab"
+return 1
+------------
+base = "abc"
+s1 = "aabbc"
+s2 = "bccaa"
+return 0;

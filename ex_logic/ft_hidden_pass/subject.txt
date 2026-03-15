@@ -1,0 +1,5 @@
+Exercise 06: ft_hidden_pass
+Turn-in directory: ex06/
+Files to turn in: ft_hidden_pass.c
+Allowed functions: write
+Description: Write a program that takes two strings as arguments. It must check if the first string is hidden sequentially inside the second string. The characters don't need to be consecutive, but they must appear in the same order. . Print 1 if true, 0 if false, followed by a newline.

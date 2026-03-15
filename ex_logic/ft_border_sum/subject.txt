@@ -1,0 +1,7 @@
+Exercise 03: ft_border_sum
+Turn-in directory: ex03/
+Files to turn in: ft_border_sum.c
+Allowed functions: None
+Description: Write a function that takes a 2D array of integers, along with its number of rows and columns. The function must calculate and return the sum of all the elements located exactly on the outer border of the matrix (the first and last row, and the first and last column).
+Prototype: int ft_border_sum(int **matrix, int rows, int cols);
+
