@@ -1,5 +1,3 @@
-# include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 
 
@@ -31,6 +29,8 @@ int* smallerNumbersThanCurrent(int* nums, int numsSize, int* returnSize)
     *returnSize = index;
     return res;
 }
+/*
+# include <stdio.h>
 int main()
 {
     int arr[] = {7,7,7,7};
@@ -39,4 +39,6 @@ int main()
     int i = 0;
     while(i < count) printf("%d ", res[i++]);
     printf("\n");
+    free(res);
 }
+*/
