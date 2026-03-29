@@ -1,7 +1,6 @@
 # include <unistd.h>
-# include <stdlib.h>
 
-int get_len(char *str, int left, int right, int len)
+int     get_len(char *str, int left, int right, int len)
 {
     while(left >= 0 && right < len && str[left] == str[right])
     {
@@ -10,7 +9,7 @@ int get_len(char *str, int left, int right, int len)
     }
     return (right - left - 1);
 }
-char *biggest_pal(char *str, int *len)
+void    biggest_pal(char *str, int *len)
 {
     int i = 0;
     int max = 0;
@@ -35,11 +34,9 @@ char *biggest_pal(char *str, int *len)
     char *res = malloc((max + 1) * sizeof(char));
     while(index < max)
     {
-        res[index++] = str[from++];
+        write(1, &str[from + index], 1);
+        index++;
     }
-    res[index] = '\0';
-    *len = max;
-    return res;
 }
 int main(int ac, char **av)
 {
@@ -48,8 +45,7 @@ int main(int ac, char **av)
         int len = 0;
         while(av[1][len])
             len++;
-        char *res = biggest_pal(av[1], &len);
-        write(1, res, len);
+        biggest_pal(av[1], &len);
     }
     write(1, "\n", 1);
 }
