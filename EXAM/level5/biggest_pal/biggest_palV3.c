@@ -27,7 +27,7 @@ char *biggest_pal(char *str, int *len)
         if(length > max)
         {
             max = length;
-            from = i - (length - 1) / 2;
+            from = i - (length - 1) / 2; // start index
         }
         i++;
     }
