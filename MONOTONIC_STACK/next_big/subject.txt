@@ -1,0 +1,16 @@
+1️⃣ Next Greater Element — Find the Next Big Number!
+Problem
+Given an array, find the next greater element for every number. If none exists to the right, return -1 for that number.
+
+Example:
+
+Input:  [2, 1, 2, 4, 3]
+Output: [4, 2, 4, -1, -1]
+
+Intuition & Dry Run:
+	Naively, for each number, you scan right until you find a bigger number → O(n²) 😵.
+
+But what if you could cleverly “remember” candidates with a stack?
+Use a monotonic decreasing stack storing indices. When a bigger number arrives, it becomes the next greater for all smaller elements popped from the stack
+
+prototype : int *next_big(int *res, int size, int *resize);

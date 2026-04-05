@@ -1,0 +1,10 @@
+Next Smaller Element — Flip the Logic
+
+Problem Statement:
+Given an array nums, for every element find the next smaller element to the right. If no such element exists, return -1 for that element.
+
+Example:
+
+Input:  [4, 2, 1, 5, 3]
+Output: [2, 1, -1, 3, -1]
+prototype : int *next_small(int *nums, int size, int *re_size);

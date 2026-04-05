@@ -1,0 +1,14 @@
+2️⃣ Next Greater Element II — Circular Array Challenge 🔄
+Problem Statement:
+Given a circular integer array nums (meaning the array "wraps around"), find the next greater element for every element in the array. The next greater element of a number x is the first greater number to its right considering circularity. If it doesn’t exist, return -1 for that element.
+
+Example:
+Input:  [1, 2, 1]
+Output: [2, -1, 2]
+Explanation:
+- For 1 (at index 0), next greater element is 2 (at index 1).
+- For 2 (at index 1), there is no greater element after it (considering circular), so -1.
+- For 1 (at index 2), next greater element is 2 (wrap around to index 1).
+
+
+prototype : int	next_greater_element(int *nums, int size, int *resize)
