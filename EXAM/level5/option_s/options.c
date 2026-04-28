@@ -1,6 +1,4 @@
 # include <unistd.h>
-# include <stdio.h>
-
 
 int check_flage(char *s)
 {
