@@ -7,7 +7,6 @@ void ft_tail(char *file, char *program)
     int fd;
     int total;
     int start;
-    int bytes;
     int count;
     char *buff;
     int size_buff;
@@ -32,9 +31,8 @@ void ft_tail(char *file, char *program)
     if(!buff)
         return;
 
-    while ((bytes = read(fd, buff + total, 1)) > 0)
+    while (read(fd, buff + total, 1) > 0)
     {
-        total += bytes;
         if(total >= size_buff) // 31024
         {
             size_buff += 1024;
@@ -44,6 +42,7 @@ void ft_tail(char *file, char *program)
                 return;
             }
         }
+        total++;
     }
     count = 0;
 
