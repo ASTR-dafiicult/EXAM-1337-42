@@ -1,0 +1,19 @@
+4. Two Pointers — Subject
+📄 Subject: Valid Palindrome II
+
+Description:
+Check if a string can become a palindrome after deleting at most one character.
+
+Prototype:
+
+int valid_palindrome(char *s);
+
+Return:
+
+1 if true
+0 if false
+
+Example:
+
+"abca" → 1
+"abc" → 0

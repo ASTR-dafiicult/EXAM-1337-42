@@ -1,0 +1,18 @@
+5. Trie — Subject
+📄 Subject: Longest Common Prefix
+
+Description:
+Given an array of strings, return the longest common prefix.
+
+Prototype:
+
+char *longest_common_prefix(char **strs, int size);
+
+Rules:
+
+You may use a Trie or any optimized approach.
+Return a dynamically allocated string.
+
+Example:
+
+["flower","flow","flight"] → "fl"

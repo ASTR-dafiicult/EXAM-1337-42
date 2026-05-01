@@ -1,0 +1,28 @@
+Assignment name  : ft_match
+Expected files   : ft_match.c
+Allowed functions: none
+
+--------------------------------------------------------------------------------
+
+Write a function that performs basic regex pattern matching.
+
+Supported patterns:
+  '.'  → matches any single character
+  '*'  → matches zero or more of the PRECEDING character
+  Any other character → matches itself exactly
+
+The pattern must match the ENTIRE string (not just a substring).
+If either argument is NULL, return 0.
+
+Your function must be declared as follows:
+
+  int  ft_match(char *s, char *pattern);
+
+Return 1 if s matches pattern, 0 otherwise.
+
+Examples:
+  ft_match("aa",    "a")    → 0
+  ft_match("aa",    "a*")   → 1
+  ft_match("ab",    ".*")   → 1
+  ft_match("aab",   "c*a*b")→ 1
+  ft_match("hello", "h.llo")→ 1

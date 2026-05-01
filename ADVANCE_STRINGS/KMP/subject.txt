@@ -1,0 +1,23 @@
+2. KMP — Subject
+
+📄 Subject: Find Pattern Occurrences
+
+Description:
+Given a text and a pattern, return all starting indices where the pattern appears in the text.
+
+Prototype:
+
+int *find_pattern(char *text, char *pattern, int *returnSize);
+
+Rules:
+
+You must implement the KMP algorithm.
+Time complexity must be O(n).
+Return a dynamically allocated array of indices.
+
+Example:
+
+text = "ababcababa"
+pattern = "aba"
+
+Output: [0, 5, 7]

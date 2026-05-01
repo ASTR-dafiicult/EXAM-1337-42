@@ -1,0 +1,23 @@
+1. Rolling Hash — Subject
+
+
+Subject: Count Unique Substrings
+
+Description:
+Write a function that returns the number of distinct substrings in a given string.
+
+Prototype: int count_unique_substrings(char *s);
+
+Rules:
+
+A substring is a contiguous part of the string.
+Two substrings are considered different if they differ in at least one character.
+You must use an efficient approach (hashing expected).
+Brute force solutions may timeout.
+
+Example:
+
+Input: "aba"
+Output: 5
+
+Allowed functions: malloc, free

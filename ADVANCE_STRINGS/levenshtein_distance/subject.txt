@@ -1,0 +1,21 @@
+6. Dynamic Programming — Subject
+
+Subject: Edit Distance
+
+Description:
+Compute the minimum number of operations required to convert one string into another.
+
+Prototype:
+
+int edit_distance(char *word1, char *word2);
+
+Allowed operations:
+
+Insert
+Delete
+Replace
+
+Example:
+
+"horse" → "ros"
+Output: 3

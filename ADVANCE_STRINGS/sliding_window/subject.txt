@@ -1,0 +1,23 @@
+3. Sliding Window — Subject
+📄 Subject: Longest Unique Substring
+
+Description:
+Return the length of the longest substring without repeating characters.
+
+Prototype:
+
+int longest_unique_substring(char *s);
+
+Rules:
+
+You must use a sliding window technique.
+Expected complexity: O(n)
+
+
+Example:
+
+Input: "abcabcbb"
+Output: 3
+
+test your code (leetcode): 
+https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1978463836/
