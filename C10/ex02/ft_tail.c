@@ -1,5 +1,4 @@
 # include "lib_tail.h"
-# include <stdio.h>
 
 void ft_tail(char *file, char *program)
 {
@@ -8,6 +7,7 @@ void ft_tail(char *file, char *program)
     int total;
     int start;
     int count;
+    int bytes;
     char *buff;
     int size_buff;
 
@@ -31,18 +31,18 @@ void ft_tail(char *file, char *program)
     if(!buff)
         return;
 
-    while (read(fd, buff + total, 1) > 0)
+
+    while ((bytes = read(fd, buff + total, 1)) > 0)
     {
+        total += bytes;
         if(total >= size_buff) // 31024
         {
             size_buff += 1024;
+            free(buff);
             buff = malloc(size_buff);
             if(!buff)
-            {
                 return;
-            }
         }
-        total++;
     }
     count = 0;
 
@@ -69,4 +69,5 @@ void ft_tail(char *file, char *program)
 
     write(1, buff + start, total - start);
     free(buff);
+    close(fd);
 }
