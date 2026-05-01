@@ -35,6 +35,8 @@ void ft_tail(char *file, char *program)
         {
             size_buff += 1024;
             buff = malloc(size_buff);
+            if(!buff)
+                return;
         }
         total++;
     }
